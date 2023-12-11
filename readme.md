@@ -1,2 +1,2 @@
-1. work with fonts
-2. work with images
+1. create route `dashboard/invoices`
+2. create `dashboard/layout.tsx`
