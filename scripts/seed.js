@@ -54,7 +54,7 @@ async function seedInvoices(client) {
     const createTable = await client.sql`
     CREATE TABLE IF NOT EXISTS invoices (
     id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-    customer_id UUID NOT NULL,
+    seller_id UUID NOT NULL,
     amount INT NOT NULL,
     status VARCHAR(255) NOT NULL,
     date DATE NOT NULL
@@ -67,8 +67,8 @@ async function seedInvoices(client) {
     const insertedInvoices = await Promise.all(
       invoices.map(
         (invoice) => client.sql`
-        INSERT INTO invoices (customer_id, amount, status, date)
-        VALUES (${invoice.customer_id}, ${invoice.amount}, ${invoice.status}, ${invoice.date})
+        INSERT INTO invoices (seller_id, amount, status, date)
+        VALUES (${invoice.seller_id}, ${invoice.amount}, ${invoice.status}, ${invoice.date})
         ON CONFLICT (id) DO NOTHING;
       `,
       ),
@@ -105,9 +105,9 @@ async function seedSellers(client) {
     // Insert data into the "sellers" table
     const insertedSellers = await Promise.all(
       sellers.map(
-        (customer) => client.sql`
+        (seller) => client.sql`
         INSERT INTO sellers (id, name, email, image_url)
-        VALUES (${customer.id}, ${customer.name}, ${customer.email}, ${customer.image_url})
+        VALUES (${seller.id}, ${seller.name}, ${seller.email}, ${seller.image_url})
         ON CONFLICT (id) DO NOTHING;
       `,
       ),
@@ -140,9 +140,9 @@ async function seedIncome(client) {
     // Insert data into the "income" table
     const insertedIncome = await Promise.all(
       income.map(
-        (rev) => client.sql`
+        (item) => client.sql`
         INSERT INTO income (month, income)
-        VALUES (${rev.month}, ${rev.income})
+        VALUES (${item.month}, ${item.income})
         ON CONFLICT (month) DO NOTHING;
       `,
       ),
