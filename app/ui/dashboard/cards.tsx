@@ -7,9 +7,9 @@ import {
 import { rubik } from '@/app/ui/fonts';
 
 const iconMap = {
-  collected: BanknotesIcon,
+  earned: BanknotesIcon,
   sellers: UsersIcon,
-  pending: ClockIcon,
+  awaiting: ClockIcon,
   invoices: ClipboardDocumentIcon,
 };
 
