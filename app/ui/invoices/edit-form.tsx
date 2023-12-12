@@ -49,7 +49,10 @@ export default function EditInvoiceForm({
 
         {/* Invoice Amount */}
         <div className="mb-4">
-          <label htmlFor="amount" className="mb-2 block text-sm font-medium">
+         <label
+            htmlFor="amount"
+            className="mb-2 block text-sm font-medium text-white"
+          >
             Choose a sum
           </label>
           <div className="relative mt-2 rounded-md">
