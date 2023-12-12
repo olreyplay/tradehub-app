@@ -1,5 +1,10 @@
 import TradeHubLogo from '@/app/ui/tradehub-logo';
 import LoginForm from '@/app/ui/login-form';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Login',
+};
 
 export default function LoginPage() {
   return (

@@ -21,14 +21,7 @@ export async function fetchIncome() {
   noStore();
 
   try {
-    // Artificially delay a response for demo purposes.
-
-    console.log('Fetching income data...');
-    await new Promise((resolve) => setTimeout(resolve, 5000));
-
     const data = await sql<Income>`SELECT * FROM income`;
-
-    console.log('Data fetch completed after 5 seconds.');
 
     return data.rows;
   } catch (error) {
