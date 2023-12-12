@@ -1,5 +1,1 @@
-1. work in the invoceis page
-
-- search work
-- table
-- pagination
+work with edit, create and delete selelrs
