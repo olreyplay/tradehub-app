@@ -1,1 +1,4 @@
-work with edit, create and delete selelrs
+## Auth functionality
+
+user@mail.com
+123456
