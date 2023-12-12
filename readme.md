@@ -1,1 +1,1 @@
-1. really easy work in the data.ts file, a couple of changes
+work with skeleton and suspense,
