@@ -1,1 +1,2 @@
-work with edit, create and delete selelrs
+1. trycatch
+2. eroro handling
