@@ -1,2 +1,4 @@
-1. trycatch
-2. eroro handling
+## Auth functionality
+
+user@mail.com
+123456
