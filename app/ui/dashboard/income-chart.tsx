@@ -15,7 +15,9 @@ export default async function IncomeChart({ income }: { income: Income[] }) {
 
   return (
     <div className="w-full md:col-span-4">
-      <h2 className={`${poppins.className} mb-4 text-xl md:text-2xl`}>
+      <h2
+        className={`${poppins.className} mb-4 text-xl text-white md:text-2xl`}
+      >
         Current Income
       </h2>
       {/* Attention! Uncomment this section when you reach this stage in the course. */}
