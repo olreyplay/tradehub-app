@@ -1,4 +1,3 @@
-## Auth functionality
+# Course Playground
 
-user@mail.com
-123456
+This repository serves as the playground for the course, providing a space for hands-on activities and exercises.
